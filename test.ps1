@@ -1,0 +1,1 @@
+﻿Invoke-WebRequest -Uri https://lugspp5gakisusawinvm.blob.core.windows.net/applicaties/Setup.exe -outfile 'C:\'
