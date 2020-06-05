@@ -1,8 +1,8 @@
 #Variabele aanmaken
-STRING = hostname
+STRING=hostname
 
 #Op de headnode
-if [[ $string == *"vm1"* ]]; then
+if [[ $STRING == *"vm1"* ]]; then
 #update yum
 yum update -y
 
@@ -31,11 +31,11 @@ chmod 400 /etc/munge/munge.key
 
 fi
 
-if  [ $string != *"vm1"* ] && [ $string == *"vm"* ]; then
+if  [ $STRING != *"vm1"* ] && [ $STRING == *"vm"* ]; then
 #dit moet gedaan worden op een andere node dit kan natuurlijk pas zodra alle nodes uitgeroled zijn:
 
 #Munge key kopieeëren naar de verschillende nodes:
-scp -p /etc/munge/munge.key $string:/etc/munge/munge.key   #<-- vannuit de headnode
+scp -p /etc/munge/munge.key $STRING:/etc/munge/munge.key   #<-- vannuit de headnode
 
 #services starten
 systemctl enable munge
