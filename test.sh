@@ -1,5 +1,5 @@
 #Variabele aanmaken
-string = hostname
+STRING = hostname
 
 #Op de headnode
 if [[ $string == *"vm1"* ]]; then
